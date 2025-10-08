@@ -1,0 +1,22 @@
+{
+  "name": "glowfix",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GlowFix client-only MVP.",
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "test": "npm --prefix client run test",
+    "lint": "npm --prefix client run lint",
+    "check:vite": "node scripts/verify-vite-version.js",
+    "check:scss": "node scripts/ensure-no-module-scss.js",
+    "ci": "npm run check:vite && npm run check:scss && npm run lint && npm run test && npm run build"
+  },
+  "workspaces": [
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  }
+}

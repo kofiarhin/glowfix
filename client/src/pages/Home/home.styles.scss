@@ -1,0 +1,36 @@
+.home-page {
+  display: grid;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.home-highlights {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.highlight-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.highlight-title {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.highlight-copy {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}

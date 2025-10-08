@@ -1,0 +1,41 @@
+.home-hero {
+  background: radial-gradient(circle at top, rgba(76, 175, 80, 0.25), transparent 60%), var(--color-bg);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-xl) auto;
+  max-width: 1000px;
+  padding: var(--spacing-xl);
+}
+
+.hero-copy {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero-subtitle {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: var(--spacing-lg);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
