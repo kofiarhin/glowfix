@@ -1,0 +1,60 @@
+{
+  "brand": {
+    "name": "GlowFix",
+    "tagline": "Instant portrait perfection.",
+    "mission": "Empower creators with clean, private, in-browser retouching tools — fast, beautiful, and accessible.",
+    "domain": "glowfix.app",
+    "tone": ["minimal", "cinematic", "confident", "modern", "trustworthy"],
+    "keywords": ["photo", "portrait", "retouch", "blur", "canvas", "ai", "editor"],
+    "logoConcept": {
+      "style": "Wordmark",
+      "font": "Inter SemiBold, lowercase 'glowfix'",
+      "accent": "emerald dot over 'i' symbolizing precision",
+      "background": "#0f0f0f",
+      "accentColor": "#4CAF50"
+    },
+    "colorPalette": {
+      "primary": "#4CAF50",
+      "dark": "#0f0f0f",
+      "surface": "#161616",
+      "text": "#f1f1f1",
+      "muted": "#aaaaaa",
+      "error": "#e74c3c"
+    }
+  },
+  "project": {
+    "projectName": "GlowFix",
+    "type": "Client-Side MVP",
+    "description": "Browser-only app to upload a portrait, apply adjustable smoothing (0–10) via Canvas/WebGL, and download results instantly.",
+    "mvpGoal": "Launch a clean, privacy-first portrait smoother entirely in-browser."
+  },
+  "uiSpec": {
+    "pages": [
+      { "name": "Home", "path": "/", "description": "Value prop + CTA to Editor" },
+      { "name": "Editor", "path": "/editor", "description": "Canvas, smoothing slider (0–10), reset, download, new image" },
+      { "name": "About", "path": "/about", "description": "Optional FAQ + privacy message ('All edits happen in your browser.')" }
+    ],
+    "layoutBehavior": {
+      "mobile": "Single column; canvas full width; controls stacked; sticky bottom actions",
+      "tablet": "Canvas top; control panel sticky below",
+      "desktop": "Split view; left canvas (max 720px); right controls card"
+    },
+    "a11y": {
+      "focusRing": "2px emerald outline with 2px offset",
+      "aria": {
+        "slider": { "aria-label": "Smoothness", "min": 0, "max": 10, "step": 1 },
+        "uploaderRegion": { "role": "region", "aria-live": "polite" },
+        "processing": { "aria-live": "polite", "aria-busy": true }
+      }
+    }
+  },
+  "smoothingMvpSpec": {
+    "method": "Canvas-based stack or gaussian blur",
+    "amountRange": { "min": 0, "max": 10, "default": 5, "step": 1 },
+    "download": {
+      "format": "image/jpeg",
+      "quality": 0.9,
+      "filename": "glowfix-smooth-[level].jpg"
+    }
+  }
+}

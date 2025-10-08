@@ -1,0 +1,23 @@
+.site-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-xl);
+}
+
+.footer-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: var(--spacing-lg);
+}
+
+.footer-brand {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.footer-meta {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}

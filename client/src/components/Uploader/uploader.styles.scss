@@ -1,0 +1,52 @@
+.uploader {
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.uploader.is-dragging {
+  border-color: var(--color-accent);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.uploader-input {
+  display: none;
+}
+
+.uploader-trigger {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  text-align: center;
+}
+
+.uploader-trigger:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.uploader-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.uploader-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.uploader-subtitle {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,44 @@
+.slider-control {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.slider-label {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slider-input {
+  appearance: none;
+  background: var(--color-border);
+  border-radius: var(--radius-md);
+  height: 4px;
+  outline: none;
+  width: 100%;
+}
+
+.slider-input:disabled {
+  opacity: 0.4;
+}
+
+.slider-input::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--color-accent);
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+}
+
+.slider-input::-moz-range-thumb {
+  background: var(--color-accent);
+  border: none;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+}
+
+.slider-value {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,12 @@
+node_modules
+client/node_modules
+coverage
+client/coverage
+.env
+notes.txt
+.DS_Store
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode
+.idea
